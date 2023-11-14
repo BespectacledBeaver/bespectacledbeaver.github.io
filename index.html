@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <img aria-hidden="true" class="logo" src="/img/Tswira_Logo.svg" alt="Logo du site">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <img aria-hidden="true" class="logo" src="img/Tswira_Logo.svg" alt="Logo du site">
+        <input type="checkbox" id="drop-down" class="nav-toggle">
         <nav class="navbar">
             <ul>
                 <button><!--<span></span>--><a href="#landing">Home</a><!--<span></span>--></button>
@@ -20,7 +20,7 @@
                 <button><!--<span></span>--><a href="#faq">FAQ</a><!--<span></span>--></button>
             </ul>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
+        <label for="drop-down" class="nav-toggle-label">
             <span></span>
         </label>
         <button class="register"><a href="">Register</a></button>
@@ -36,7 +36,7 @@
             Bibendum volutpat faucibus et gravida lorem egestas neque, facilisi et. Semper et suspendisse ultrices odio id ut nibh. Ipsum elementum pulvinar velit orci rhoncu
             </p>
         </div>
-        <img class="camera" src="/img/camera.svg" alt="">
+        <img class="camera" src="img/camera.svg" alt="">
     </section>
     <section id="agenda">
         <div>
@@ -46,25 +46,25 @@
                     <p>opening ceremony</p>
                     <p>8:30-10am</p>
                     <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum, voluptatibus dolores sed quo ut dolorem animi molestias.</p>
-                    <img class="camera" src="/img/camera.svg" alt="">
+                    <img class="camera" src="img/camera.svg" alt="">
                 </div>
                 <div class="event">
                     <p>workshops</p>
                     <p>10-12am</p>
                     <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum, voluptatibus dolores sed quo ut dolorem animi molestias.</p>
-                    <img class="camera" src="/img/camera.svg" alt="">
+                    <img class="camera" src="img/camera.svg" alt="">
                 </div>
                 <div class="event">
                     <p>competition starts</p>
                     <p>1-3:30pm</p>
                     <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur</p>
-                    <img class="camera" src="/img/camera.svg" alt="">
+                    <img class="camera" src="img/camera.svg" alt="">
                 </div>
                 <div class="event">
                     <p>délibération</p>
                     <p>3:30-6pm</p>
                     <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum</p>
-                    <img class="camera" src="/img/camera.svg" alt="">
+                    <img class="camera" src="img/camera.svg" alt="">
                 </div>
             <!--</div>-->
         </div>
@@ -72,42 +72,42 @@
     <section id="workshops">
         <p class="title">workshops</p>
         <div>
-            <input class="slide-input" type="radio" name="1" id="1" checked>
-            <input class="slide-input" type="radio" name="1" id="2">
-            <input class="slide-input" type="radio" name="1" id="3">
-            <input class="slide-input" type="radio" name="1" id="4">
-            <div class="left-arrow">
+            <input class="w-slide-input" type="radio" name="workshop" id="w1" checked>
+            <input class="w-slide-input" type="radio" name="workshop" id="w2">
+            <input class="w-slide-input" type="radio" name="workshop" id="w3">
+            <input class="w-slide-input" type="radio" name="workshop" id="w4">
+            <div class="w-left-arrow">
                 <div>
                     <svg viewBox="0 0 8 8">
                         <path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path>
                     </svg>
                 </div>
             </div>
-            <div class="accordion">
-                <div class="slide">
+            <div class="w-accordion">
+                <div class="w-slide">
                     <p>BRUHH</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
                 </div>
-                <div class="slide">
+                <div class="w-slide">
                     <p>BRUHH2</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
                 </div>
-                <div class="slide">
+                <div class="w-slide">
                     <p>BRUHH3</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
                 </div>
-                <div class="slide">
+                <div class="w-slide">
                     <p>BRUHH4</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
                 </div>
             </div>
-            <div class="navigation">
-                <label for="1" class="input-label"></label>
-                <label for="2" class="input-label"></label>
-                <label for="3" class="input-label"></label>
-                <label for="4" class="input-label"></label>
+            <div class="w-navigation">
+                <label for="w1" class="input-label"></label>
+                <label for="w2" class="input-label"></label>
+                <label for="w3" class="input-label"></label>
+                <label for="w4" class="input-label"></label>
             </div>
-            <div class="right-arrow">
+            <div class="w-right-arrow">
                 <div>
                     <svg viewBox="0 0 8 8">
                         <path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path>
@@ -116,9 +116,67 @@
             </div>
         </div>
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section id="jury">
+        <p class="title">jury</p>
+        <div>
+            <input class="j-slide-input" type="radio" name="jury" id="j1" checked>
+            <input class="j-slide-input" type="radio" name="jury" id="j2">
+            <input class="j-slide-input" type="radio" name="jury" id="j3">
+            <input class="j-slide-input" type="radio" name="jury" id="j4">
+            <div class="j-accordion">
+                <div class="j-slide">
+                    <img src="img/cr7.png" alt="">
+                    <div>
+                        <p class="jury-name">Karim Al - Ronal (2)</p>
+                        <p class="jury-description">Everyone has a price</p>
+                    </div>
+                </div>
+                <div class="j-slide">
+                    <img src="img/max.png" alt="">
+                    <div>
+                        <p class="jury-name">max verstappen</p>
+                        <p class="jury-description"> TU TU TU TU MAX VERSTAPPEN TU TU TU TU MAX VERSTAPPEN</p>
+                    </div>
+                </div>
+                <div class="j-slide">
+                    <img src="img/squirrelwip.png" alt="">
+                    <div>
+                        <p class="jury-name">Squirrel</p>
+                        <p class="jury-description">That's cuz he's the goat. The GOAT</p>
+                    </div>
+                </div>
+                <div class="j-slide">
+                    <img src="img/test.png" alt="">
+                    <div>
+                        <p class="jury-name">Grendizer</p>
+                        <p class="jury-description">A classic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="j-navigation">
+                <label for="j1" class="input-label"></label>
+                <label for="j2" class="input-label"></label>
+                <label for="j3" class="input-label"></label>
+                <label for="j4" class="input-label"></label>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <p class="title">gallery</p>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <section id="faq">
+        <p class="title">faq</p>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
     <section></section>
 </body>
 </html>

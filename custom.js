@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
+    const leftArrow = document.querySelector('.w-left-arrow');
+    const rightArrow = document.querySelector('.w-right-arrow');
 
-    const sliderInputs = document.querySelectorAll('.slide-input');
+    const sliderInputs = document.querySelectorAll('.w-slide-input');
 
     let index = 0;
 
