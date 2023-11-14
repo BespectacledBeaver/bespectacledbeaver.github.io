@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tswira</title>
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <script defer src="custom.js" ></script>
 </head>
 <body>
     <header>
@@ -14,9 +15,9 @@
             <ul>
                 <button><!--<span></span>--><a href="#landing">Home</a><!--<span></span>--></button>
                 <button><!--<span></span>--><a href="#about">About</a><!--<span></span>--></button>
-                <button><!--<span></span>--><a href="">Agenda</a><!--<span></span>--></button>
-                <button><!--<span></span>--><a href="">Workshops</a><!--<span></span>--></button>
-                <button><!--<span></span>--><a href="">FAQ</a><!--<span></span>--></button>
+                <button><!--<span></span>--><a href="#agenda">Agenda</a><!--<span></span>--></button>
+                <button><!--<span></span>--><a href="#workshops">Workshops</a><!--<span></span>--></button>
+                <button><!--<span></span>--><a href="#faq">FAQ</a><!--<span></span>--></button>
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -27,11 +28,94 @@
     <section id="landing" style="height: 700px;padding-top:calc(60.44px + 2rem);">
         Look here
     </section>
-    <section id="about" style="height: 600px;">
-        Now here
+    <section id="about">
+        <p class="title">about us</p>
+        <div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum volutpat faucibus et gravida lorem egestas neque, facilisi et. Semper et suspendisse ultrices odio id ut nibh. Ipsum elementum pulvinar velit orci rhoncus,
+            Bibendum volutpat faucibus et gravida lorem egestas neque, facilisi et. Semper et suspendisse ultrices odio id ut nibh. Ipsum elementum pulvinar velit orci rhoncu
+            </p>
+        </div>
+        <img class="camera" src="/img/camera.svg" alt="">
     </section>
-    <section></section>
-    <section></section>
+    <section id="agenda">
+        <div>
+            <p class="title">Agenda</p>
+            <!--<div>-->
+                <div class="event">
+                    <p>opening ceremony</p>
+                    <p>8:30-10am</p>
+                    <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum, voluptatibus dolores sed quo ut dolorem animi molestias.</p>
+                    <img class="camera" src="/img/camera.svg" alt="">
+                </div>
+                <div class="event">
+                    <p>workshops</p>
+                    <p>10-12am</p>
+                    <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum, voluptatibus dolores sed quo ut dolorem animi molestias.</p>
+                    <img class="camera" src="/img/camera.svg" alt="">
+                </div>
+                <div class="event">
+                    <p>competition starts</p>
+                    <p>1-3:30pm</p>
+                    <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur</p>
+                    <img class="camera" src="/img/camera.svg" alt="">
+                </div>
+                <div class="event">
+                    <p>délibération</p>
+                    <p>3:30-6pm</p>
+                    <p class="huh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto minus ea porro neque natus accusantium consequatur voluptatem, fuga praesentium ipsum, eos illum</p>
+                    <img class="camera" src="/img/camera.svg" alt="">
+                </div>
+            <!--</div>-->
+        </div>
+    </section>
+    <section id="workshops">
+        <p class="title">workshops</p>
+        <div>
+            <input class="slide-input" type="radio" name="1" id="1" checked>
+            <input class="slide-input" type="radio" name="1" id="2">
+            <input class="slide-input" type="radio" name="1" id="3">
+            <input class="slide-input" type="radio" name="1" id="4">
+            <div class="left-arrow">
+                <div>
+                    <svg viewBox="0 0 8 8">
+                        <path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="slide">
+                    <p>BRUHH</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
+                </div>
+                <div class="slide">
+                    <p>BRUHH2</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
+                </div>
+                <div class="slide">
+                    <p>BRUHH3</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
+                </div>
+                <div class="slide">
+                    <p>BRUHH4</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing el</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="1" class="input-label"></label>
+                <label for="2" class="input-label"></label>
+                <label for="3" class="input-label"></label>
+                <label for="4" class="input-label"></label>
+            </div>
+            <div class="right-arrow">
+                <div>
+                    <svg viewBox="0 0 8 8">
+                        <path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
