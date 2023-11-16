@@ -151,6 +151,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: calc(60.44px + 2rem);
+    overflow-x: hidden;
 }
 
 body {
@@ -643,7 +644,24 @@ section>div>p {
     background-image:  linear-gradient(rgba(46, 107, 229, 0.2) 1px, transparent 1px), linear-gradient(to right, rgba(46, 107, 229, 0.2) 1px, transparent 1px);
     background-size: 4rem 6rem;
     z-index: -1;
-    box-shadow: inset 1rem 1rem 20px #ffe6f0, inset -1rem -1rem 20px #ffe6f0, inset -1rem 1rem 20px #ffe6f0, inset 1rem -1rem 20px #ffe6f0;
+    box-shadow: inset 1rem 1rem 20px #ffe6f0,
+                inset -1rem -1rem 20px #ffe6f0,
+                inset -1rem 1rem 20px #ffe6f0,
+                inset 1rem -1rem 20px #ffe6f0;
+    animation: shmooving 8000ms ease-in-out infinite;
+}
+
+@keyframes shmooving {
+    0% {
+        background-position: 4rem 0rem;
+    }
+    50% {
+        background-position: 0rem 6rem;
+    }
+    100%{
+        background-position: -4rem 0rem;
+    }
+    
 }
 
 .big-title {
@@ -689,21 +707,32 @@ section>div>p {
     margin-inline: auto;
     box-shadow: calc(-1*var(--fs-600)) calc(-1*var(--fs-200)) #2c6be5,
                 calc(-2*var(--fs-600)) calc(-2*var(--fs-200)) #f38040;
-    animation: swirly 5500ms ease-in infinite alternate;
+    animation: swirly 7500ms ease-in infinite alternate;
+    transition: transform 7500ms ease-in;
+}
+
+#landing video:hover {
+    /*-webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;*/
+    animation-play-state:paused;
 }
 
 @keyframes swirly {
     0%, 2% {
+        transform: translateY(calc(cos(1.05*0deg)*var(--fs-200)));
         box-shadow: calc(-1*var(--fs-600)) calc(-1*cos(1.05*0deg)*var(--fs-200)) #2c6be5,
-                calc(-2*var(--fs-600)) calc(-2*cos(45deg)*var(--fs-200)) #f38040;
+                    calc(-2*var(--fs-600)) calc(-2*cos(45deg)*var(--fs-200)) #f38040;
     }
     50% {
+        transform: translateY(calc(cos(1.05*150deg)*var(--fs-200)));
         box-shadow: calc(-1*var(--fs-600)) calc(-1*cos(1.05*150deg)*var(--fs-200)) #2c6be5,
-                calc(-2*var(--fs-600)) calc(-2*cos(195deg)*var(--fs-200)) #f38040;
+                    calc(-2*var(--fs-600)) calc(-2*cos(195deg)*var(--fs-200)) #f38040;
     }
     98%, 100%{
+        transform: translateY(calc(cos(1.05*360deg)*var(--fs-200)));
         box-shadow: calc(-1*var(--fs-600)) calc(-1*cos(1.05*360deg)*var(--fs-200)) #2c6be5,
-                calc(-2*var(--fs-600)) calc(-2*cos(405deg)*var(--fs-200)) #f38040;
+                    calc(-2*var(--fs-600)) calc(-2*cos(405deg)*var(--fs-200)) #f38040;
     }
 }
 
