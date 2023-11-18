@@ -658,6 +658,16 @@ section>div>p {
     max-width: clamp(19rem, 50vw + 5rem, 40rem);
 }
 
+@media screen and (max-width: 425px) {
+    #agenda {
+        margin-inline: auto;
+    }
+
+    .event {
+        margin-inline: 1rem;
+    }
+}
+
 .event:last-of-type {
     margin-bottom: clamp(5rem, 8vw + 3rem, 8rem);
 }
