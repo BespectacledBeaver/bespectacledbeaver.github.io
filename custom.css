@@ -575,8 +575,8 @@ section>div>p {
 
 #about {
     position: relative;
-    min-height: 80vh;
-    min-height: 80dvh;
+    min-height: clamp(100px, 80vh, 120vw);
+    min-height: clamp(100px, 80dvh, 120dvw);
 }
 
 #about>div:last-of-type {
