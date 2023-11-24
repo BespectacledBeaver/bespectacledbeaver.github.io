@@ -1,6 +1,6 @@
 const sliderInputs = document.querySelectorAll('.w-slide-input');
 let wIndex = 0;
-let indexArray = [0, 1, 2, 3, 2, 1, 0];
+let indexArray = [0, 1, 2, 1, 0];
 
 document.addEventListener('DOMContentLoaded', function () {
     const leftArrow = document.querySelector('.w-left-arrow');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    setInterval(goToNextWSlide, 3000);
+    setInterval(goToNextWSlide, 5000);
 
 });
 
@@ -45,7 +45,7 @@ function goToNextWSlide() {
 
     if(width < 600){
         sliderInputs[indexArray[wIndex]].checked = true;
-        wIndex = (wIndex + 1) % 7;     
+        wIndex = (wIndex + 1) % 5;     
     }
 
 };
