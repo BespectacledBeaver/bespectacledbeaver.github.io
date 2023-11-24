@@ -767,7 +767,25 @@ section>div>p {
     color: #F7FAFB;
     margin-top: 10px;
     margin-right: 10px;
-    text-shadow: -1px 1px 0 #F38040, 1px 1px 0 #F38040, 1px -1px 0 #F38040, -1px -1px 0 #F38040;
+}
+
+@media screen and (800px <= width) {
+    .event>p:nth-child(2){
+        text-shadow: -1px 1px 0 #F38040, 1px 1px 0 #F38040, 1px -1px 0 #F38040, -1px -1px 0 #F38040;
+    }
+}
+
+@media screen and ( width < 800px) {
+    .event>p:nth-child(2){
+        animation: glow 5s ease infinite alternate;
+        text-shadow: 0px 0px 5px #F38040;
+    }
+
+    @keyframes glow {
+        100% {
+            text-shadow: 0px 0px 1px #F38040;
+        }
+    }
 }
 
 .event>p:nth-child(3){
