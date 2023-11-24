@@ -761,6 +761,7 @@ section>div>p {
     text-align: left;
     line-height: 28px;
     margin-bottom: calc(clamp(1rem, 6.66vw - 0.66rem, 3.5rem)/2 + 10px);
+    max-width: 75vw;
 }
 
 #workshops,
