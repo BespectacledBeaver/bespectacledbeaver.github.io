@@ -609,11 +609,11 @@ section>div>p {
 #about>.camera {
     position: absolute;
     display: block;
-    top: 7rem;
+    top: clamp(6rem, 2.353vw + 5.529rem, 7rem);
     right: 1.6rem;
     background-color: #f38040;
     border: clamp(1px, 0.33vw - 0.33px, 3px) solid #2c6be5;
-    height: clamp(3rem, 10.66vw + 0.33rem, 7rem);
+    height: clamp(3.5rem, 8.235vw + 1.853rem, 7rem);
     aspect-ratio: 1;
     border-radius: 10px;
     box-shadow: 3px 6px #2c6be5;
@@ -622,7 +622,7 @@ section>div>p {
 }
 
 #about>.camera:hover {
-    top: 7.2rem;
+    top: calc( 0.2rem + clamp(6rem, 2.353vw + 5.529rem, 7rem));
     right: 1.4rem;
     box-shadow: 0px 0px #2c6be5;
     transition: all 350ms ease-out;
@@ -825,7 +825,7 @@ section>div>p {
     background-color: #cddef6;
     margin: auto;
     border-radius: 85px;
-    min-height: 25rem;
+    min-height: 20rem;
     max-width: 80vw;
 }
 
@@ -855,7 +855,7 @@ section>div>p {
     min-width: 0;
     max-width: clamp(13.75rem, 71.6rem - 4.15rem, 40.6rem);
     height: min-content;
-    min-height: 22rem;
+    min-height: 15rem;
     visibility: hidden;
     font-family: var(--ff-title);
     font-size: var(--fs-500);
@@ -1092,8 +1092,7 @@ section>div>p {
     font-weight: 300;
     line-height: 36px;
     max-width: 25ch;
-    min-height: 10ch;
-    margin-top: 60px;
+    margin-top: clamp(0rem, 4.412vw - 0.882rem, 1.875rem);
 }
 
 .j-slide-input:nth-child(1):not(:checked)~.j-accordion>.j-slide:nth-child(1) *,
@@ -1181,15 +1180,16 @@ section>div>p {
 .card {
     position: relative;
     background-color: #cddef6;
+    width: calc( 2rem + clamp(18.75rem, 29.412vw + 12.868rem, 31.25rem));
+    height: 100%;
     border-radius: calc(1rem + 0.25*clamp(8rem, 16vw + 4rem, 14rem));
     display: grid;
     grid-template-columns: auto auto;
-    place-items: center;
     transition: transform 350ms ease-in-out;
 }
 
 .card:hover {
-    transform: translate(-1.75rem,-2rem);
+    transform: translate(calc(-1*var(--fs-500)),calc(-1*var(--fs-900)));
     transition: transform 300ms ease-in-out;
 }
 
@@ -1212,7 +1212,7 @@ section>div>p {
 #contact-us>img {
     position: absolute;
     display: block;
-    height: clamp(5.2rem, 4.8vw + 4rem, 7rem);
+    height: clamp(4.16rem, 6.682vw + 2.824rem, 7rem);
     aspect-ratio: 1;
     margin: 1.2rem;
 }
@@ -1255,7 +1255,7 @@ section>div>p {
 }
 
 .logos>img {
-    height: clamp(4rem, 5.33vw + 2.66rem, 6rem);
+    height: clamp(3.2rem, 6.588vw + 1.882rem, 6rem);
 }
 
 .links {
@@ -1276,7 +1276,7 @@ section>div>p {
 }
 
 .links>a>img {
-    height: clamp(2rem, 2.66vw + 1.33rem, 3rem);
+    height: clamp(1.6rem, 3.294vw + 0.941rem, 3rem);
 }
 
 .esi {
@@ -1286,6 +1286,10 @@ section>div>p {
 @media screen and (width < 600px) {
     .w-left-arrow,
     .w-right-arrow {
+        display: none;
+    }
+
+    .w-navigation {
         display: none;
     }
 

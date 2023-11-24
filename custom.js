@@ -1,8 +1,10 @@
+const sliderInputs = document.querySelectorAll('.w-slide-input');
+let wIndex = 0;
+let indexArray = [0, 1, 2, 3, 2, 1, 0];
+
 document.addEventListener('DOMContentLoaded', function () {
     const leftArrow = document.querySelector('.w-left-arrow');
     const rightArrow = document.querySelector('.w-right-arrow');
-
-    const sliderInputs = document.querySelectorAll('.w-slide-input');
 
     let index = 0;
 
@@ -33,4 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
             sliderInputs[index].checked = true;
         }
     });
+
+    setInterval(goToNextWSlide, 3000);
+
 });
+
+function goToNextWSlide() {
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+    if(width < 600){
+        sliderInputs[indexArray[wIndex]].checked = true;
+        wIndex = (wIndex + 1) % 7;     
+    }
+
+};
