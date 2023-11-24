@@ -617,7 +617,7 @@ section>div>p {
     aspect-ratio: 1;
     border-radius: 10px;
     box-shadow: 3px 6px #2c6be5;
-    padding: clamp(0.2rem, 2.13vw - 0.33rem, 1rem);;
+    padding: clamp(0.5rem, 1.176vw + 0.265rem, 1rem);;
     transition: all 750ms ease-in;
 }
 
