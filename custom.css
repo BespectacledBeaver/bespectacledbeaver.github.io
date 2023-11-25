@@ -386,6 +386,20 @@ section>div>p {
     z-index: -2;
 }
 
+#landing .register  {
+    display: block;
+    margin: 0;
+    padding: 0 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    font-family: var(--ff-title);
+    font-weight: bold;
+    text-transform: none;
+    margin-left: 1rem;
+}
+
 @media screen and (orientation:landscape) and ( 1000px < width) {
     #landing {
         grid-template-columns: 1fr 1fr;
@@ -409,16 +423,67 @@ section>div>p {
     #landing {
         display: grid;
         grid-template-rows: unset !important;
-        isolation: isolate;
-    }
-
-    #landing > *{
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
+        grid-template-rows: auto auto auto;
     }
 
     #landing>div:nth-of-type(1) {
         margin-left: 0.2rem;
+    }
+
+    #landing .mobile-none {
+        display: none !important;
+    }
+
+    #landing video {
+        max-width: 90vw;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 2rem;
+        margin-inline: auto;
+        box-shadow: calc(-1*var(--fs-200)) calc(-1*var(--fs-100)) #2c6be5,
+                    calc(-2*var(--fs-200)) calc(-2*var(--fs-100)) #f38040;
+        z-index: 2;
+        /*animation: swirly 7500ms ease-in infinite alternate;
+        transition: transform 7500ms ease-in;*/
+    }
+
+    #landing>div:nth-of-type(2) {
+        position: relative;
+        margin-inline: auto;
+        margin-block: 1rem;
+        margin-bottom: 2rem;
+        z-index: 1;
+    }
+
+    #landing>div:nth-of-type(2)::before {
+        content: '';
+        position: absolute;
+        display: block;
+        
+        width: 115vw;
+        aspect-ratio: 16/9;
+        bottom: -6vw;
+        left: -15vw;
+        border-radius: 25vw;
+        background-image:  linear-gradient(rgba(46, 107, 229, 0.2) 1px, transparent 1px), linear-gradient(to right, rgba(46, 107, 229, 0.2) 1px, transparent 1px);
+        background-size: 4rem 6rem;
+        z-index: -1;
+        box-shadow: inset 0.5rem 0.5rem 20px #F5F5F5,
+                    inset -0.5rem -0.5rem 20px #F5F5F5,
+                    inset -0.5rem 0.5rem 20px #F5F5F5,
+                    inset 0.5rem -0.5rem 20px #F5F5F5;
+    }
+
+    #landing .register {
+        transform: scale(1.5,1.5);
+        margin-block: 2rem;
+        margin-left: 0.2rem;
+        z-index: 10;
+    }
+/*
+    #landing > *{
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
     }
 
     #landing > div:nth-of-type(2) {
@@ -436,6 +501,7 @@ section>div>p {
     #landing p {
         text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
     }
+    */
 }
 
 @media screen and (1000px <= width) {
@@ -448,6 +514,10 @@ section>div>p {
     align-items: flex-end;
     flex-grow: 1;
     position: relative;
+}
+
+#landing .desktop-none {
+    display: none !important;
 }
 
 #landing>div:nth-of-type(2)::before {
@@ -553,20 +623,6 @@ section>div>p {
     color: #2c6be5;
     width: 16ch;
     text-align: left;
-}
-
-#landing .register  {
-    display: block;
-    margin: 0;
-    padding: 0 1rem;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-
-    font-family: var(--ff-title);
-    font-weight: bold;
-    text-transform: none;
-    margin-left: 1rem;
 }
 
 #landing .register a  {
@@ -1099,6 +1155,7 @@ section>div>p {
     line-height: 36px;
     max-width: 35ch;
     margin-top: clamp(0rem, 4.412vw - 0.882rem, 1.875rem);
+    padding-inline: 10px;
 }
 
 #contact-us {
