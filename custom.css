@@ -1152,7 +1152,7 @@ section>div>p {
     font-family: var(--ff-general);
     font-size: var(--fs-400);
     font-weight: 300;
-    line-height: 36px;
+    line-height: calc(1.75*var(--fs-400));
     max-width: 35ch;
     margin-top: clamp(0rem, 4.412vw - 0.882rem, 1.875rem);
     padding-inline: 10px;
