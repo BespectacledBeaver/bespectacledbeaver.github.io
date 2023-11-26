@@ -1128,7 +1128,7 @@ section>div>p {
     transition: transform 300ms ease-in-out;
 }
 
-.card > img {
+.card  img {
     height: clamp(8rem, 16vw + 4rem, 14rem);
     aspect-ratio: 1;
     object-fit: cover;
