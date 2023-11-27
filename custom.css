@@ -1253,4 +1253,10 @@ section>div>p {
     .w-accordion {
         margin-inline: 10px;
     }
+
+    .card > div {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
 }
